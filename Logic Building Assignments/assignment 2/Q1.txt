@@ -1,0 +1,16 @@
+class Room{
+            int h;
+            int w;
+            int b;
+
+            public static void main(String args[])
+             {
+               Room obj = new Room(3,4,5);
+               System.out.println(h,w,b);
+               int V;
+              V = obj.volume();
+             }
+
+      //       void volume()
+        //    { 
+                
