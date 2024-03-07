@@ -1,0 +1,29 @@
+Name:- Mohit Gaikwad
+Assignment 1 :- problem 1
+
+1. ls --> to navigate through home dirctory
+2. mkdir LinuxAssignment --> to create new directory inside home directory
+3. cd LinuxAssignment --> to change directory to LinuxAssignment
+4. touch file1.txt --> Creates new txt file inside the LinuxAssignment directory
+5. cat file.txt --> to display content of "file1.txt"
+6. mkdir docs --> Creates "docs" directory inside LinuxAssignment directory
+7. cp file1.txt docs --> to make a Copy of file1.txt file to docs directory
+8. cd docs --> to change directory to docs to see copied file
+9. ls --> checked if file is copied or not
+10. mv file1.txt file.txt --> to rename copied file to "file1.txt" to "file2.txt"
+11. ls -n --> checked the read,write and execute. it was already for read for other user so no need of change if need to change then, --> "chmod u+rwx g+r-wx o+r-wx file2.txt"
+12. chown mohit_gaikwad file2.txt --> to change ownership of "file2.txt" to user mohit_gaikwad 
+13. pwd --> to check the the directory path
+14. cd .. --> to go in LinuxAssignment directory
+15. ls --> to display content of LinuxAssignment directory
+16. find -name "*txt" --> to display all the text files present in current directory and other subdirectories. for first try i accidently put find -name ".txt"
+17. cat > file1.txt --> to edit the content of file after entering the content press ctrl+D to get to command line 
+18. grep "hello" file1.txt --> after entring some content in file i put this coomand to search a which has "hello" word init and display it. i had to try this command 1-3 times beacuse it was new to me 'cause i was putting wrong syntax
+19. date --> date coomand was taught by mam on first day it is used to display current date and time
+20. hostname -I --> to display ip address
+21. ping www.google.com --> it pinged google.com contunosly then i had to search the command to get out of it it was ctrl+C
+22. zip -r docs.zip docs --> to create zip file of docs directory
+23. sudo apt install zip --> i had to install zip  command to use it asked for password and some extra storage on system and continue to install after installation i zipped docs file
+24. unzip docs.zip -d new_docs --> to unzip/ extract the content of the docs.zip into new_docs directory
+25. sed -i 's/hello/world/g' file1.txt --> file1.txt already had hello world. I, replaced hello-->world so i became world world.
+26. cat file1.txt --> to display the file1.txt file to see changes and "hello world" beacame "world world"
