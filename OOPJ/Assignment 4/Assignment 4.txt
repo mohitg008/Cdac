@@ -1,0 +1,223 @@
+//Author:- Mohit Gaikwad
+// Date:- 16 March 2024
+
+--------------------------------------------------------------------------------------
+
+//1) Build a class Student which contains details about the Student and compile and run its instance.
+
+/*
+
+package com.assignment4;
+import java.util.*;
+public class Student {
+            String Name;
+            int RollNum;
+            int Age;
+
+      
+	public static void main(String[] args) {
+		
+		Student obj=new Student();
+		obj.scanDetails();
+		obj.printDetails();
+	
+	}
+	 public void printDetails(){
+			System.out.println(" Name : "+this.Name);
+		    System.out.println(" Roll Number : "+this.RollNum); 
+		    System.out.println(" Age:"+this.Age);   
+
+ 	   
+    }
+    
+    public void scanDetails(){
+ 	   Scanner sc = new Scanner(System.in);
+			System.out.print("Enter the Name of Student : ");
+
+ 	    this.Name=sc.next();
+		    System.out.print("Enter the Roll Number : "); 
+
+		    this.RollNum=sc.nextInt();
+		    
+		    System.out.print("Enter the Age of student :");   
+
+		    this.Age=sc.nextInt();
+		    sc.close();
+ 	   
+    }
+         
+}
+
+*/
+
+
+--------------------------------------------------------------------------------------
+// 2)Write a Vehicle class with overloaded methods that have a different number of parameters. Demonstrate calling these overloaded methods with various numbers of arguments. 
+
+/*
+package com.assignment4;
+
+import java.util.*;
+
+public class Vehicle {
+	String Name;
+	int Wheels;
+	int Doors;
+	int SeatCapacity;
+	static Scanner sc = new Scanner(System.in);
+
+  
+	    void Vtypes(String n ,int w,int d) {
+		System.out.print("Enter the Vehicle Name:");
+		this.Name = sc.next();
+		
+		System.out.print("Enter the number of Wheels:");
+		this.Wheels = sc.nextInt();
+		
+		System.out.print("Enter the number of Doors");
+		this.Doors = sc.nextInt();
+        
+		
+	}
+	
+	
+	    void Vtypes(String n,int w,int d,int seat) {
+		System.out.print("Enter the Vehicle Name:");
+		this.Name = sc.next();
+		
+		System.out.print("Enter the number of Wheels:");
+		this.Wheels = sc.nextInt();
+		
+		System.out.print("Enter the number of Doors:");
+		this.Doors = sc.nextInt();
+		
+		System.out.print("Enter the Seat Capacity:");
+		this.SeatCapacity = sc.nextInt();
+		
+		
+	}
+	
+	     void Vtypes(String n,int wheel) {
+		System.out.print("Enter the Vehicle Name:");
+		this.Name = sc.next();
+		
+		System.out.print("Enter the number of Wheels:");
+		this.Wheels = sc.nextInt();
+		
+		
+	}
+	
+	void printv1(){
+
+		System.out.println("Name: "+this.Name);
+		System.out.println("Wheels: "+this.Wheels);
+		System.out.println("Doors: "+this.Doors);
+		System.out.println("Seat Capacity: "+this.SeatCapacity);
+		}
+
+
+
+
+		void printv2(){
+
+		System.out.println("Name: "+this.Name);
+		System.out.println("Wheels: "+this.Wheels);
+		System.out.println("Doors: "+this.Doors);
+		System.out.println("Seat Capacity: "+this.SeatCapacity);
+		}
+
+
+		void printv3(){
+
+		System.out.println("Name: "+this.Name);
+		System.out.println("Wheels: "+this.Wheels);
+
+		}
+
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Vehicle obj = new Vehicle();
+            obj.Vtypes("car",4,4);
+            obj.printv1();
+            obj.Vtypes("bus",6,3,50);
+            obj.printv2();
+            obj.Vtypes("cycle",1);
+            obj.printv3();
+            
+	}
+
+}
+
+*/
+
+--------------------------------------------------------------------------------------
+
+// 3)Create a class Employee with multiple overloaded methods that have different parameter types (e.g., int, double, String). Demonstrate calling each overloaded method with appropriate arguments
+
+/*
+package com.assignment4;
+
+import java.util.*;
+public class Employee {
+	
+    String Name;
+    int EmpNo;
+    double salary;
+  Scanner sc =new Scanner(System.in);
+  void scanemp(String n,int n1,double s){
+    System.out.print("Enter Name of Employee:");
+     this.Name=sc.next();
+    System.out.print("Enter Employee number:");
+      this.EmpNo=sc.nextInt();
+    System.out.print("Enter Salary:");
+      this.salary=sc.nextDouble();
+}
+      void scanemp(double s,String n,int n2){
+    System.out.print("Enter Name of Employee:");
+     this.Name=sc.next();
+    System.out.print("Enter Employee number:");
+      this.EmpNo=sc.nextInt();
+    System.out.print("Enter Salary:");
+      this.salary=sc.nextDouble();
+}     
+      
+void scanemp(int n,double s,String N){
+    System.out.print("Enter Name of Employee:");
+     this.Name=sc.next();
+    System.out.print("Enter Employee number:");
+      this.EmpNo=sc.nextInt();
+    System.out.print("Enter Salary:");
+      this.salary=sc.nextDouble();
+}
+ 
+    void PrtEmp(){
+System.out.println("Name:"+this.Name);
+System.out.println("Employee Number:"+this.EmpNo);
+System.out.println("Salary:"+this.salary);
+
+       }
+
+    
+  
+    
+public static void main(String[] args) {
+	// TODO Auto-generated method stub
+      Employee obj = new Employee();
+        
+      obj.scanemp("mohit",45,90000.00);
+      obj.PrtEmp();
+      obj.scanemp(50000.00,"mohit",45);
+      obj.PrtEmp();
+      obj.scanemp(45,50000.00,"mohit");
+      obj.PrtEmp();
+
+	
+
+}
+
+}
+*/
+
+--------------------------------------------------------------------------------------
