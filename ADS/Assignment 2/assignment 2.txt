@@ -1,0 +1,208 @@
+//author :- Mohit Gaikwad
+
+
+// 1. Print 1 to n without using loops
+
+
+
+import java.util.Scanner;
+class PrintNum{
+
+
+  
+   static void printN(int n){
+          
+        if( n<=0 ){
+             
+              return;          
+            }
+  
+           printN(n-1);
+           System.out.print(n + " ");
+
+
+          }
+
+
+public static void main(String args[]){
+ 
+  Scanner sc = new Scanner(System.in);
+  System.out.println("Enter the Number n :");
+  int a = sc.nextInt();
+
+     System.out.println("Numbers from 1 to " + a + ":");
+
+   printN(a);
+
+
+
+}
+
+---------------------------------------------------------------------
+
+//2. Sum of natural numbers using recursion
+
+import java.util.Scanner;
+ class SumNum{
+
+   static int sum(int n){
+      
+         if(n==0){
+
+       return 0;
+ 
+             }
+         else{
+
+             return n + sum(n-1);
+         }
+
+    }
+
+
+public static void main(String args[]){
+
+  Scanner sc = new Scanner(System.in);
+  System.out.println("Enter a number : ");
+   int a = sc.nextInt();
+  
+         
+ int res =  sum(a);
+
+System.out.println("your result is : "+res);
+
+}
+
+}
+
+------------------------------------------------------------------
+
+// 3. Mean of Array using Recursion
+
+import java.util.Scanner;
+
+ class MeanArray
+{
+
+ static int avgArray(int arr[],int size)
+   {
+         int sum=0;
+           if(size<=0)
+             {   
+                   return sum;
+             }   
+          else
+             {
+               sum = arr[size-1]+avgArray(arr,size-1);
+             }    
+          return sum;
+
+       }
+   
+
+
+ public static void main(String arg[])
+ {
+
+ Scanner sc = new Scanner(System.in);
+ System.out.println("Enter the size of an Array: ");
+ int size = sc.nextInt();
+ int arr[] = new int[size];
+ System.out.println("Enter the array elements");
+ for(int i=0; i<arr.length;i++)
+   {
+      arr[i]=sc.nextInt();
+  } 
+   
+ int avg = avgArray(arr,arr.length)/size;
+ System.out.println( "Average of this array is "+avg);
+
+
+}
+}
+
+-----------------------------------------------------------------
+
+//4. Sum of array elements using recursion
+
+import java.util.Scanner;
+class SumOfElm
+{
+
+   static int sum(int arr[],int size)
+    {
+        int sum = 0;
+         if(size<=0)
+          {
+            return sum; 
+           }
+         else
+            {
+                   sum = arr[size-1]+sum(arr,size-1);
+                   
+            }
+
+           return sum;
+    }
+
+
+public static void main(String args[])
+{
+
+ Scanner sc =new Scanner(System.in);
+ System.out.println("Enter the size of an array: ");
+ int size = sc.nextInt();
+ int arr[] = new int[size];
+ int i=0;
+ System.out.println("Enter the array elements: ");
+
+ for( int element : arr )
+   {   
+      arr[i++] = sc.nextInt();
+
+        }
+ System.out.println("Total Sum of array elements is : "+sum(arr,size));
+
+
+
+}
+
+
+}
+
+----------------------------------------------------------------------------
+
+//7.Print reverse of a string using recursion
+
+import java.util.Scanner;
+class RevString
+{
+
+    static String rev(char[] a, int i )
+     {        char b[] = new char[a.length];
+             if(i<0)
+               { 
+                return "";
+                }
+            else
+                {
+                b[a.length-1-i] = a[i];
+               return b[a.length-1-i]+rev(a, i-1);
+
+                 }
+      }
+     
+
+public static void main(String args[])
+{
+  Scanner sc =new Scanner(System.in);
+  String str = sc.nextLine();
+   char a[] = str.toCharArray();
+  String Reversed = rev(a,a.length);
+System.out.println(str+"is reversed to "+Reversed);
+}
+
+}
+
+-----------------------------------------------------------------------------
+
