@@ -1,0 +1,16 @@
+1) Which field of the Customers table is the primary key?
+
+--> the primary key field is Cnum
+
+2) What is the 4th column of the Customers table?
+
+--> 4th column of the CUSTOMERS table is 'Rating'
+
+3) What is another word for row? For column?
+
+--> another word for a row in a table is a attribute or a field
+
+4) Why isn’t it possible to see the first five rows of a table?
+
+--> it is not possible to see first five rows just by creating  table. tables in databases are just structures that hold data and until data is inserted into them there are no rows to display. we can only view rows after you've inserted data into the table
+

@@ -1,0 +1,12 @@
+1) Does ANSI recognize the data type DATE?
+
+--> ANSI SQL does recognize the data type DATE. It's a standard data type used to store dates without any time information. It's supported by many RDBMS that adhere to ANSI SQL standards, such as MySQL, PostgreSQL, Oracle, SQL Server, and others.
+
+2) Which subdivision of SQL is used to insert values in tables?
+
+--> Data manipulation Language (DML)
+         -INSERT
+         -UPDATE
+         -DELETE
+     this commands are used to manipulte data within tables
+
