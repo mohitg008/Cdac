@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+      
+    <h2>Hello JavaScript!</h2>
+    <div class="box">first div</div>
+    <div class="box">second div</div>
+    <div class="box">third div</div>
+    <div class="box">first div</div>
+    <div class="box">second div</div>
+    <div class="box">third div</div>
+    <div class="box">third div</div>
+    
+    <script>
+        /* let h2 = document.querySelector("h2");
+        console.dir(h2.innerText);
+
+        h2.innerText = h2.innerText + " From Cdac Mumbai";
+         */
+
+     let divs = document.querySelectorAll(".box");
+   //  console.dir(divs[0]);
+     let i = 0;
+       for(div of divs){
+        div.innerText = `new Unique value ${i}`;
+        i++;
+       }
+
+    /* divs[0].innerText = "new unique value 1";
+    divs[1].innerText = "new unique value 2";
+    divs[2].innerText = "new unique value 3"; */
+    </script>
+    
+</body>
+</html>
