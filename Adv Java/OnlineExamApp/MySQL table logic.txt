@@ -1,0 +1,20 @@
+create table tbl_question(
+id int primary key auto_increment,
+question varchar(50),
+option1 varchar(50),
+option2 varchar(50),
+option3 varchar(50),
+option4 varchar(50),
+right_answer int);
+
+
+insert into tbl_question (question,option1,option2,option3,option4,right_answer) values
+('What is Java?', 'Java is an OS','Java is programming lang','Java is Database', 'Java is browser',2);
+
+
+insert into tbl_question (question,option1,option2,option3,option4,right_answer) values
+('What is Oracle?', 'Oracle is an OS','Oracle is programming lang','Oracle is Database', 'Oracle is browser',3);
+
+insert into tbl_question (question,option1,option2,option3,option4,right_answer) values
+('What is Windows?', 'Windows is an OS','Windows is programming lang','Windows is Database', 'Windows is browser',1);
+
