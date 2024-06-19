@@ -20,27 +20,25 @@ import com.cdac.jdbc.QuestionLoader;
 @WebServlet("/QuestionLoaderServlet")
 public class QuestionLoaderServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	int qNo;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-    QuestionLoader loader = new QuestionLoader();
-    List<Question> list = loader.loadQuestions();
-    
+		QuestionLoader loader = new QuestionLoader();
+		List<Question> list = loader.loadQuestions();
 
-    
-    HttpSession session = request.getSession();
-    if(list != null && !list.isEmpty()) {
-        Question q = list.get(0);
-    	session.setAttribute("currentQ", q);
-    }
-    else {
-    	session.setAttribute("currentQ", null);
-    }
-    
-    response.sendRedirect("viewQuestion.jsp");
-    		
-    
-		
+		HttpSession session = request.getSession();
+
+		if (qNo < list.size()) {
+			Question q = list.get(qNo++);
+			session.setAttribute("currentQ", q);
+			System.out.println("Question loaded and set in session: " + q.getQuestion());
+
+			response.sendRedirect("viewQuestion.jsp");
+		}
+		else
+			response.sendRedirect("score.jsp");
+
 	}
 
 }

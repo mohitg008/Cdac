@@ -28,7 +28,7 @@ public class QuestionLoader {
 				q.setOption4(rs.getString("option4"));
 				q.setRightAnswer(rs.getInt("right_answer"));
 				list.add(q);
-
+				 System.out.println("Loaded question: " + q.getQuestion());
 			}
 			return list;
 
@@ -37,6 +37,7 @@ public class QuestionLoader {
 			return null;
 		} finally {
 			try {
+				if (conn != null)
 				conn.close();
 			} catch (Exception e) {
 			}
